@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Runs prettier on all files before comitting them. Has to be placed inside
+# .git/hooks/.
+# src: https://prettier.io/docs/en/precommit.html
+
+FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+
+echo "Running prettier to format files before commiting..."
+
+# Prettify all selected files
+echo "$FILES" | xargs ./node_modules/.bin/prettier --ignore-unknown --write
+
+echo "Done!"
+
+# Add back the modified/prettified files to staging
+echo "$FILES" | xargs git add
+
+exit 0
+

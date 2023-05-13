@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-typescript-modern-starter",
+  "version": "1.0.0",
+  "main": "dist/src/index.js",
+  "repository": "git@github.com:xddq/testcicd.git",
+  "author": "Pierre Dahmani <hi@pierre-dev.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node tasks.mjs build",
+    "bundle": "node tasks.mjs bundle",
+    "clean": "node tasks.mjs clean",
+    "dev": "concurrently \"npm:watch-*\"",
+    "start": "node tasks.mjs start",
+    "test": "node tasks.mjs test",
+    "watch-node": "node tasks.mjs watch-node",
+    "watch-ts": "node tasks.mjs watch-ts"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "2.0.0",
+    "@types/node": "18.16.8",
+    "@types/shelljs": "0.8.12",
+    "concurrently": "7.6.0",
+    "esbuild": "0.17.18",
+    "nodemon": "2.0.22",
+    "prettier": "2.8.8",
+    "shelljs": "0.8.5",
+    "typescript": "5.0.4"
+  },
+  "packageManager": "yarn@3.5.1"
+}
