@@ -6,7 +6,7 @@ This minimal and modern starter repo is here to help you solve this problem.
 
 ## Overview
 
-This starter uses a bare-bones and minimal approach and ideal to get up and
+This starter uses a bare-bones and minimal approach to get anyone up and
 running with a new project in no time. It provides:
 
 - Typescript 5 set up with the entrypoint in `./src/index.ts`.
