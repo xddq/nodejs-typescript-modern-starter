@@ -2,7 +2,7 @@
 
 While developing with Typescript and Node.js is awesome, **setting up a new
 project is painful**.
-This minimal and mordern starter repo is here to help you solve this.
+This minimal and modern starter repo is here to help you solve this problem.
 
 ## Overview
 
