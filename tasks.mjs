@@ -117,23 +117,23 @@ const main = () => {
   if (taskName === "build") {
     return build();
   }
-  if (taskName === "test") {
-    return test();
-  }
   if (taskName === "bundle") {
     return bundle();
-  }
-  if (taskName === "start") {
-    return start();
   }
   if (taskName === "clean") {
     return clean();
   }
-  if (taskName === "watch-ts") {
-    return watchTs();
+  if (taskName === "start") {
+    return start();
+  }
+  if (taskName === "test") {
+    return test();
   }
   if (taskName === "watch-node") {
     return watchNode();
+  }
+  if (taskName === "watch-ts") {
+    return watchTs();
   }
 
   console.error(`Unknown task: ${taskName}`);

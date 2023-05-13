@@ -21,6 +21,24 @@ running with a new project in no time. It provides:
 - Formatting set up via [prettier](https://prettier.io/).
 - Bundling set up via [esbuild](https://esbuild.github.io/), a fast bundler that
   "just works" and is nowadays even used in the typescript codebase.
+- Defaults to current LTS with Node.js version 18.
+
+#### Project Goals
+
+- Help you to just **get started** with a Node.js Typescript setup and **not
+  worry about configuration**.
+- Advocate for **testing your code**. This is done by providing the common
+  approaches "tests and code side by side" as well as "all tests in a seperate
+  folder" already working and set up for you. To have developers write tests it
+  has to be dead simple add them.
+- Advocate for **using CI/CD** (in this case Github Actions). This is done by
+  providing a sample action that is already working which builds and tests your
+  code for different node versions and operating systems for each PR.
+- Don't force any linting onto you. While I prefer linting, I know enough people
+  and situations against it. The repo should be useful to everyone.
+- Don't force any specific libraries or frameworks onto you. With this setup,
+  you can easily pick the library or framework and integrate it yourself. Again,
+  the repo should be useful to everyone.
 
 ## Prerequisites
 
