@@ -137,3 +137,6 @@ bundle
 dist
 node_modules
 TODO
+# eslintignore and prettierignore specific
+.yarn
+.github

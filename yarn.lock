@@ -240,7 +240,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nodemon@npm:^1.19.2":
+"@types/nodemon@npm:1.19.2":
   version: 1.19.2
   resolution: "@types/nodemon@npm:1.19.2"
   dependencies:
@@ -1190,7 +1190,7 @@ __metadata:
   dependencies:
     "@tsconfig/node18": 2.0.0
     "@types/node": 18.16.8
-    "@types/nodemon": ^1.19.2
+    "@types/nodemon": 1.19.2
     "@types/shelljs": 0.8.12
     concurrently: 7.6.0
     esbuild: 0.17.18

@@ -54,7 +54,8 @@ running with a new project in no time. It provides:
 - Set up your own git folder and create your first commit. Run `git init && git
 add . && git commit -am "initial commit"`
 - (optional) Set up the git hook for formatting your code. `cp
-.git-hooks/pre-commit .git/hooks/pre-commit`
+.git-hooks/pre-commit .git/hooks/pre-commit`. For windows you need to use
+  [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to use this.
 - Use the node version specified in .nvmrc `nvm install && nvm use`
 - Install dependencies `npm i -g yarn && yarn --immutable`
 - You're done🎉 What about you try running the tests? Run `yarn test`. See the
