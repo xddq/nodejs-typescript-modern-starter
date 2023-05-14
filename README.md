@@ -57,7 +57,7 @@ add . && git commit -am "initial commit"`
 .git-hooks/pre-commit .git/hooks/pre-commit`. For windows you need to use
   [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to use this.
 - Use the node version specified in .nvmrc `nvm install && nvm use`
-- Install dependencies `npm i -g yarn && yarn --immutable`
+- Install dependencies `npm i -g yarn && yarn`
 - You're done🎉 What about you try running the tests? Run `yarn test`. See the
   section below for all available commands together with their explanation.
 
@@ -82,6 +82,9 @@ on behind the scenes. It contains comments for every script.
   rebuilds the project. It does also watch all changes made to the built project
   and restarts the code whenever changes are detected. This enables a quick
   feedback loop.
+- `yarn format` -> Formats the code using prettier.
+- `yarn format-check` -> Checks for formatting errors using prettier. This is
+  typically only invoked by the CI/CD pipeline.
 - `yarn start` -> Runs the code. This only works if the code was built before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
   approaches of putting tests beside the source code as well as putting tests in
