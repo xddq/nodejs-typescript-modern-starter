@@ -16,4 +16,3 @@ jobs:
         run: yarn --immutable
       - name: Format
         run: yarn format-check
-
