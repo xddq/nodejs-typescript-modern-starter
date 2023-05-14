@@ -10,6 +10,8 @@
     "bundle": "node tasks.mjs bundle",
     "clean": "node tasks.mjs clean",
     "dev": "concurrently \"npm:watch-*\"",
+    "format": "node tasks.mjs format --write",
+    "format-check": "node tasks.mjs format --check",
     "start": "node tasks.mjs start",
     "test": "node tasks.mjs test",
     "watch-node": "node tasks.mjs watch-node",

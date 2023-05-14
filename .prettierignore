@@ -137,3 +137,5 @@ bundle
 dist
 node_modules
 TODO
+# prettierignore specific
+.yarn

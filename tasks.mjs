@@ -103,6 +103,26 @@ export const clean = () => {
 };
 
 /**
+ * Formats the whole codebase (ignores files specified in .prettierignore).
+ * @param {Array<string>} [additionalArguments]
+ */
+export const format = (additionalArguments) => {
+  const pathToPrettier = ["node_modules", "prettier", "bin-prettier"].join(
+    path.sep
+  );
+  const { code } = shell.exec(
+    `node ${pathToPrettier} . ${additionalArguments}`
+  );
+  if (code !== 0) {
+    console.error(`task failed with code ${code}`);
+    console.error(
+      "Run `yarn format` to format your codebase. Or set up the pre-commit hook to avoid these kind of issues."
+    );
+    process.exit(code);
+  }
+};
+
+/**
  * @param {number} code
  **/
 const handleNonZeroReturnCode = (code) => {
@@ -113,7 +133,7 @@ const handleNonZeroReturnCode = (code) => {
 };
 
 const main = () => {
-  const [_, __, taskName] = process.argv;
+  const [_, __, taskName, ...additionalArguments] = process.argv;
   if (taskName === "build") {
     return build();
   }
@@ -122,6 +142,9 @@ const main = () => {
   }
   if (taskName === "clean") {
     return clean();
+  }
+  if (taskName === "format") {
+    return format(additionalArguments);
   }
   if (taskName === "start") {
     return start();
