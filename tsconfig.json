@@ -1,6 +1,7 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "node16",
     "outDir": "./dist",
     "baseUrl": "."
   }

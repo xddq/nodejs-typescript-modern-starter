@@ -1,6 +1,6 @@
 import { describe, test } from "node:test";
 import assert from "node:assert/strict";
-import { returnHelloWorld } from "./hello";
+import { returnHelloWorld } from "./hello.js";
 
 describe("unit tests and code side by side", () => {
   test("returnHelloWorld() - returns 'hello world'", () => {

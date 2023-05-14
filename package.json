@@ -4,6 +4,7 @@
   "main": "dist/src/index.js",
   "repository": "git@github.com:xddq/nodejs-typescript-modern-starter",
   "author": "Pierre Dahmani <hi@pierre-dev.com>",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "build": "node tasks.mjs build",
@@ -16,7 +17,7 @@
     "watch-ts": "node tasks.mjs watch-ts"
   },
   "devDependencies": {
-    "@tsconfig/node18": "2.0.0",
+    "@tsconfig/node18": "2.0.1",
     "@types/node": "18.16.8",
     "@types/nodemon": "1.19.2",
     "@types/shelljs": "0.8.12",
