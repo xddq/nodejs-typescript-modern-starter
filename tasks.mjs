@@ -123,6 +123,25 @@ export const format = (additionalArguments) => {
 };
 
 /**
+ * Lints the whole codebase (ignores files specified in .eslintignore).
+ * @param {Array<string>} [additionalArguments]
+ */
+export const lint = (additionalArguments) => {
+  const pathToEslint = ["node_modules", "eslint", "bin", "eslint.js"].join(
+    path.sep
+  );
+  const { code } = shell.exec(`node ${pathToEslint} . ${additionalArguments}`);
+  if (code !== 0) {
+    console.error(`task failed with code ${code}`);
+    console.error(
+      "Run `yarn lint` to lint your codebase. It fixes automatically fixable problems for you." +
+        "The rest of the problems have to be figured out and cleared by yourself."
+    );
+    process.exit(code);
+  }
+};
+
+/**
  * @param {number} code
  **/
 const handleNonZeroReturnCode = (code) => {
@@ -145,6 +164,9 @@ const main = () => {
   }
   if (taskName === "format") {
     return format(additionalArguments);
+  }
+  if (taskName === "lint") {
+    return lint(additionalArguments);
   }
   if (taskName === "start") {
     return start();

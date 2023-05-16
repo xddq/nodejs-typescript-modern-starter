@@ -2,43 +2,49 @@
 
 While developing with Typescript and Node.js is awesome, **setting up a new
 project is painful**.
-This minimal and modern starter repo is here to help you solve this problem.
+This minimal and modern starter repo is here to help you get started with
+Node.js and Typecript without the pain.
 
 ## Overview
 
 This starter uses a bare-bones and minimal approach to get anyone up and
 running with a new project in no time. It provides:
 
-- Typescript 5 set up with the entrypoint in `./src/index.ts`.
+- Typescript 5 with a strict tsconfig.
 - Yarn/Npm scripts ready to do everything you commonly need. Supporting `build`,
   `clean`, `test`, `bundle`, `dev` and `start`. These scripts are created to be
   compatible with the operating systems linux, macos and windows.
-- A Github Action set up to automatically build and test the code for each PR.
-  Running with current node versions (18,20) on linux, macos and windows.
-- Testing set up via the new Node.js [test
+- Github Actions in place runnung with current node version (18,20) on linux,
+  macos and windows to automatically (for each PR):
+  - build and test the code
+  - check for formatting issues
+  - lint the codebase
+- Testing via the new Node.js [test
   runner](https://nodejs.org/api/test.html#test-runner) instead of something
   like mocha or jest.
-- Formatting set up via [prettier](https://prettier.io/).
-- Bundling set up via [esbuild](https://esbuild.github.io/), a fast bundler that
-  "just works" and is nowadays even used in the typescript codebase.
-- Defaults to current LTS with Node.js version 18.
+- Formatting via [prettier](https://prettier.io/).
+- Linting via [eslint](https://eslint.org/) and
+  [typescript-eslint](https://typescript-eslint.io/)
+- Bundling via [esbuild](https://esbuild.github.io/), a fast bundler that "just
+  works" and is nowadays even used in the typescript codebase.
+- Using the current LTS, Node.js 18
 
 #### Project Goals
 
 - Help you to just **get started** with a Node.js Typescript setup and **not
   worry about configuration**.
-- Advocate for **testing your code**. This is done by providing the common
-  approaches "tests and code side by side" as well as "all tests in a seperate
-  folder" already working and set up for you. To have developers write tests it
-  has to be dead simple add them.
-- Advocate for **using CI/CD** (in this case Github Actions). This is done by
-  providing a sample action that is already working which builds and tests your
-  code for different node versions and operating systems for each PR.
-- Don't force any linting onto you. While I prefer linting, I know enough people
-  and situations against it. The repo should be useful to everyone.
-- Don't force any specific libraries or frameworks onto you. With this setup,
-  you can easily pick the library or framework and integrate it yourself. Again,
-  the repo should be useful to everyone.
+- All scripts compatible with linux, macos and windows.
+- No magic. Everything kept as simple as possible while configuring anything you
+  might need.
+- Advocate for **testing your code**. The common approaches of _tests and code
+  side by side_ as well as _all tests in a seperate folder_ already working and
+  set up for you.
+- Advocate for **using CI/CD** (in this case Github Actions). Automatically
+  check formatting, linting and build and test the code base. Everything running
+  on each PR.
+- Use modern tools like esbuild, typescript 5 and the nodejs test runner.
+- Be open for any framework or library that you prefer. This setup should be
+  useful to everyone. You can easily add your preferred packages in to time.
 
 ## Prerequisites
 
@@ -85,7 +91,25 @@ on behind the scenes. It contains comments for every script.
 - `yarn format` -> Formats the code using prettier.
 - `yarn format-check` -> Checks for formatting errors using prettier. This is
   typically only invoked by the CI/CD pipeline.
+- `yarn lint` -> Lints the code using eslint. Fixes problems that are
+  auto-fixable and reports the rest of them to you.
+- `yarn lint-check` -> Checks for linting errors using eslint. This is typically
+  only invoked by the CI/CD pipeline.
 - `yarn start` -> Runs the code. This only works if the code was built before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
   approaches of putting tests beside the source code as well as putting tests in
   a seperate folder.
+
+## Linting
+
+This repo has [eslint](https://eslint.org/) and
+[typescript-eslint](https://typescript-eslint.io/) as well as an automated
+Github Action to check for linting set up and ready to go. However, it does not
+enable the defaults/recommended rules by default. It simply contains the code
+style and rules I personally prefer using. If you think that I should add or
+remove a rule, I am always open for thoughts :].
+
+I made it **dead simple** to enable the default/recommended eslint rules, if you
+want to use them. Everything is documented, just browse to
+[./eslintrc.cjs](https://github.com/xddq/nodejs-typescript-modern-starter/blob/main/eslintrc.cjs)
+and uncommend the code.
