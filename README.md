@@ -112,4 +112,4 @@ remove a rule, I am always open for thoughts :].
 I made it **dead simple** to enable the default/recommended eslint rules, if you
 want to use them. Everything is documented, just browse to
 [./eslintrc.cjs](https://github.com/xddq/nodejs-typescript-modern-starter/blob/main/eslintrc.cjs)
-and uncommend the code.
+and adapt the code.
