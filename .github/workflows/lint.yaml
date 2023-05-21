@@ -3,7 +3,7 @@ name: check for linting issues
 on: [pull_request]
 
 jobs:
-  format:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
