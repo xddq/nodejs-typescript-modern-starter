@@ -42,6 +42,9 @@ running with a new project in no time. It provides:
 - Advocate for **using CI/CD** (in this case Github Actions). Automatically
   check formatting, linting and build and test the code base. Everything running
   on each PR.
+- Advocate establishing best practices via linting rules using eslint and
+  typescript-eslint. However, still giving a documented way to quickly and
+  easily disable them, if that is preferred.
 - Use modern tools like esbuild, typescript 5 and the nodejs test runner.
 - Be open for any framework or library that you prefer. This setup should be
   useful to everyone. You can easily add your preferred packages in to time.
@@ -104,12 +107,15 @@ on behind the scenes. It contains comments for every script.
 
 This repo has [eslint](https://eslint.org/) and
 [typescript-eslint](https://typescript-eslint.io/) as well as an automated
-Github Action to check for linting set up and ready to go. However, it does not
-enable the defaults/recommended rules by default. It simply contains the code
-style and rules I personally prefer using. If you think that I should add or
-remove a rule, I am always open for thoughts :].
+Github Action to check for linting set up and ready to go.
 
-I made it **dead simple** to enable the default/recommended eslint rules, if you
-want to use them. Everything is documented, just browse to
+The rules in this project are my personal preference and reflect a subset of the
+recommended options. They also include a lot of the more strict options (NOT
+included in the recommended ones). My goal is to simplify having a consistent
+code base/code style, to avoid catchable bugs early and advocate for usage of
+newer features of the language.
+
+However, I made it **dead simple** to enable the default/recommended eslint
+rules, if you want to use them instead. Everything is documented, just browse to
 [./eslintrc.cjs](https://github.com/xddq/nodejs-typescript-modern-starter/blob/main/eslintrc.cjs)
 and adapt the code.

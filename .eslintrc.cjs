@@ -31,8 +31,8 @@ module.exports = {
    * The following rules are my personal preference and reflect a subset of the
    * recommended options. They also include a lot of the more strict options NOT
    * included in the recommended ones. My goal is to simplify having a
-   * consistent code base/ code style, avoiding catchable bugs early and
-   * advocating for newer features of the language.
+   * consistent code base/code style, to avoid catchable bugs early and advocate
+   * for usage of newer features of the language.
    **/
   overrides: [
     {
