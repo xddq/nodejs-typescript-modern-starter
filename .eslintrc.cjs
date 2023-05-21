@@ -26,9 +26,13 @@ module.exports = {
    * You can use the rules inside this overrides to specify the rules you want
    * to use on a one by one / case by case basis. If you simply want to go with
    * the default, just remove or uncomment the whole "overrides"
-   * property/attribute. The following rules are my preference and consist of a
-   * mix of recommended(not all recommended ones) and more strict(not all strict
-   * ones :]) eslint and typescript-eslint rules.
+   * property/attribute and you're done.
+   *
+   * The following rules are my personal preference and reflect a subset of the
+   * recommended options. They also include a lot of the more strict options NOT
+   * included in the recommended ones. My goal is to simplify having a
+   * consistent code base/ code style, avoiding catchable bugs early and
+   * advocating for newer features of the language.
    **/
   overrides: [
     {
@@ -66,18 +70,22 @@ module.exports = {
         // typescript-eslint rules
         // check https://typescript-eslint.io/rules/ for reference
         "@typescript-eslint/array-type": "error",
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+        "@typescript-eslint/no-unnecessary-condition": "error",
+        "@typescript-eslint/prefer-includes": "error",
+        "@typescript-eslint/prefer-optional-chain": "error",
+        "@typescript-eslint/prefer-reduce-type-parameter": "error",
+        "@typescript-eslint/prefer-string-starts-ends-with": "error",
+        "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-unsafe-call": "error",
+        "@typescript-eslint/no-unsafe-return": "error",
+        "@typescript-eslint/no-unsafe-member-access": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/restrict-plus-operands": "error",
       },
     },
   ],
   root: true,
 };
-
-//  - [ ] no-constant-condition
-//   - [ ] no-duplicate-imports
-//   - [ ] no-fallthrough
-//   - [ ] no-loss-of-precision
-//   - [ ] no-promise-executor-return
-//   - [ ] use-isnan
-//   - [ ] arrow-body-style [error,always]
-//   - [ ] default-case
-//   - [ ] default-case-last

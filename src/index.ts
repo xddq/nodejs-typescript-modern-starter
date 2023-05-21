@@ -2,8 +2,6 @@ const main = () => {
   console.log("hello Node.js and Typescript world :]");
 };
 
-// const y = 1 | 2;
-
 // This was just here to force a linting error for now to demonstrate/test the
 // eslint pipeline. You can uncomment this and run "yarn check-lint" to test the
 // linting.
