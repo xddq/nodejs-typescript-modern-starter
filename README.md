@@ -117,5 +117,5 @@ newer features of the language.
 
 However, I made it **dead simple** to enable the default/recommended eslint
 rules, if you want to use them instead. Everything is documented, just browse to
-[./eslintrc.cjs](https://github.com/xddq/nodejs-typescript-modern-starter/blob/main/eslintrc.cjs)
+[./.eslintrc.cjs](https://github.com/xddq/nodejs-typescript-modern-starter/blob/main/.eslintrc.cjs)
 and adapt the code.
