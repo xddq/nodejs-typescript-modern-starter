@@ -1894,6 +1894,9 @@ __metadata:
     prettier: 2.8.8
     shelljs: 0.8.5
     typescript: 5.0.4
+  bin:
+    nodejs-typescript-modern-starter: dist/src/index.js
+    ntms: dist/src/index.js
   languageName: unknown
   linkType: soft
 
