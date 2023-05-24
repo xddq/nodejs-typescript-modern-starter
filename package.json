@@ -2,7 +2,7 @@
   "name": "nodejs-typescript-modern-starter",
   "version": "1.0.0",
   "main": "dist/src/index.js",
-  "typings": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
   "bin": {
     "nodejs-typescript-modern-starter": "dist/src/index.js",
     "ntms": "dist/src/index.js"
