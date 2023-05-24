@@ -25,8 +25,8 @@ module.exports = {
   /**
    * You can use the rules inside this overrides to specify the rules you want
    * to use on a one by one / case by case basis. If you simply want to go with
-   * the default, just remove or uncomment the whole "overrides"
-   * property/attribute and you're done.
+   * the default, just remove or uncomment the whole "rules" section inside the
+   * "overrides" property and you are done.
    *
    * The following rules are my personal preference and reflect a subset of the
    * recommended options. They also include a lot of the more strict options NOT
