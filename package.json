@@ -41,7 +41,7 @@
     "watch-ts": "node tasks.mjs watch-ts"
   },
   "devDependencies": {
-    "@tsconfig/node18": "2.0.0",
+    "@tsconfig/node18": "2.0.1",
     "@types/node": "18.16.8",
     "@types/nodemon": "1.19.2",
     "@types/shelljs": "0.8.12",
