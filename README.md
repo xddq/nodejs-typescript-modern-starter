@@ -27,6 +27,8 @@ running with a new project in no time. It provides:
   [typescript-eslint](https://typescript-eslint.io/)
 - Bundling via [esbuild](https://esbuild.github.io/), a fast bundler that "just
   works" and is nowadays even used in the typescript codebase.
+- Automated dependency updates via
+  [renovate](https://github.com/renovatebot/renovate).
 - Using the current LTS, Node.js 18
 
 #### Project Goals
@@ -119,3 +121,15 @@ However, I made it **dead simple** to enable the default/recommended eslint
 rules, if you want to use them instead. Everything is documented, just browse to
 [./.eslintrc.cjs](https://github.com/xddq/nodejs-typescript-modern-starter/blob/main/.eslintrc.cjs)
 and adapt the code.
+
+## Automated Dependency Updates
+
+After using this repo (either via the github template or by simply cloning it)
+you have to set up a renovate bot. For github this can easily be done via the
+Github Apps [renovate](https://github.com/apps/renovate) as well as
+[renovate-approve](https://github.com/apps/renovate-approve). To be able to the
+mimic the approach used in this repo, you should set up:
+
+- the repo setting to allow auto-merge
+- a branch protection rule for the main branch to require approval (will be
+  handled via renovate-approve)
