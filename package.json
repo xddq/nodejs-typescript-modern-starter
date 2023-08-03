@@ -50,7 +50,7 @@
     "concurrently": "7.6.0",
     "esbuild": "0.18.4",
     "eslint": "8.46.0",
-    "eslint-config-prettier": "8.9.0",
+    "eslint-config-prettier": "8.10.0",
     "nodemon": "2.0.22",
     "prettier": "2.8.8",
     "shelljs": "0.8.5",
