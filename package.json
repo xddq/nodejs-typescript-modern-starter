@@ -54,7 +54,7 @@
     "nodemon": "2.0.22",
     "prettier": "2.8.8",
     "shelljs": "0.8.5",
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   },
   "packageManager": "yarn@3.6.0"
 }
