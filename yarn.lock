@@ -355,12 +355,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nodemon@npm:1.19.2":
-  version: 1.19.2
-  resolution: "@types/nodemon@npm:1.19.2"
+"@types/nodemon@npm:1.19.3":
+  version: 1.19.3
+  resolution: "@types/nodemon@npm:1.19.3"
   dependencies:
     "@types/node": "*"
-  checksum: 2f9301089b0643ad3d9ee20b8a79984c53ed425c6afac3022d1546e73374baf87ae3736329bf3f038cf39d921862754b4166574815a00a17525901c9180a6884
+  checksum: ed6cb23895939a8a34a5097d70d0f98f6668845891fc74da59d0a8e7f039546a0e15146173faa7d7af17167a6b669c34cd7eafb235bfb9ee7ccef9b95f20a88b
   languageName: node
   linkType: hard
 
@@ -1904,7 +1904,7 @@ __metadata:
   dependencies:
     "@tsconfig/node18": 2.0.1
     "@types/node": 18.16.19
-    "@types/nodemon": 1.19.2
+    "@types/nodemon": 1.19.3
     "@types/shelljs": 0.8.12
     "@typescript-eslint/eslint-plugin": 5.62.0
     "@typescript-eslint/parser": 5.62.0
