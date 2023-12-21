@@ -17,6 +17,7 @@
     "modern",
     "starter",
     "nodejs typescript modern starter",
+    "debugging",
     "ts",
     "esbuild",
     "prettier",
@@ -41,7 +42,7 @@
     "watch-ts": "node tasks.mjs watch-ts"
   },
   "devDependencies": {
-    "@tsconfig/node18": "2.0.1",
+    "@tsconfig/node18": "18.2.2",
     "@types/node": "18.16.19",
     "@types/nodemon": "1.19.6",
     "@types/shelljs": "0.8.12",

@@ -27,6 +27,7 @@ running with a new project in no time. It provides:
   [typescript-eslint](https://typescript-eslint.io/)
 - Bundling via [esbuild](https://esbuild.github.io/), a fast bundler that "just
   works" and is nowadays even used in the typescript codebase.
+- Debugging set up with examples for vscode and vim.
 - Automated dependency updates via
   [renovate](https://github.com/renovatebot/renovate).
 - Using the current LTS, Node.js 18
@@ -104,6 +105,48 @@ on behind the scenes. It contains comments for every script.
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
   approaches of putting tests beside the source code as well as putting tests in
   a seperate folder.
+
+## Debugging
+
+An enourmous amount of people default to `console log debugging` since
+understanding the setup for debugging typescript can be somewhat awful and
+painful. This repo provides a debug config and guide ready to use for
+[vscode](git@github.com:microsoft/vscode.git) and for vim using
+[vimspector](https://github.com/puremourning/vimspector). Both use the mostly
+DAP compliant debugger
+[vscode-js-debug](https://github.com/microsoft/vscode-js-debug).
+
+### Debugging Code
+
+#### Vim
+
+- Start the node process with inspect-brk `yarn build && node --inspect-brk ./dist/src/index.js` in one terminal.
+- Open src/index.ts `vim ./src/index.ts` in another terminal.
+- Set breakpoint in line 6 (F9 is the default mapping)
+- Start vimspector by pressing F5
+- Press F5 again, should see the console.log output
+- Done🎉
+
+#### Vscode
+
+- Open code, set a breakpoint in src/index.ts and just start debugging with F5.
+
+### Debugging Tests
+
+#### Vim
+
+- Start the node process with inspect-brk `yarn build && node --inspect-brk --test --test-reporter spec` in one terminal.
+- Open src/index.ts `vim ./src/hello.test.ts` in another terminal.
+- Set breakpoint in line 8 (F9 is the default mapping)
+- Start vimspector by pressing F5
+- You should see the first console log already "testing returnHelloWorld()"
+- Press F5 again, should see the second console.log "Done"
+- Done🎉
+
+#### Vscode
+
+- Open code and set a breakpoint in /src/hello.test.ts.
+- Go to the package.json in the 'scripts' sections, click on 'debug' and select 'test'.
 
 ## Linting
 
