@@ -129,13 +129,13 @@ DAP compliant debugger
 
 #### Vscode
 
-TODO
+- Open code, set a breakpoint in src/index.ts and just start debugging with F5.
 
 ### Debugging Tests
 
 #### Vim
 
-- Start the node process with inspect-brk `yarn build && node --inspect-brk ./dist/src/index.js` in one terminal.
+- Start the node process with inspect-brk `yarn build && node --inspect-brk --test --test-reporter spec` in one terminal.
 - Open src/index.ts `vim ./src/hello.test.ts` in another terminal.
 - Set breakpoint in line 8 (F9 is the default mapping)
 - Start vimspector by pressing F5
@@ -145,7 +145,8 @@ TODO
 
 #### Vscode
 
-TODO
+- Open code and set a breakpoint in /src/hello.test.ts.
+- Go to the package.json in the 'scripts' sections, click on 'debug' and select 'test'.
 
 ## Linting
 
