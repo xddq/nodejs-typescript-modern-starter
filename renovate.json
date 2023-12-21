@@ -11,14 +11,12 @@
       "automerge": true,
       "automergeType": "pr",
       "platformAutomerge": true,
-      "matchDataSources": ["npm"],
       "minimumReleaseAge": "5 days",
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch"
     },
     {
       "matchUpdateTypes": ["major"],
-      "matchDataSources": ["npm"],
       "minimumReleaseAge": "5 days",
       "dependencyDashboardApproval": true
     }
