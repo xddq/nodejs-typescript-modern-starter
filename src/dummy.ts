@@ -11,17 +11,17 @@ type ValidateRow<T> = {
   [K in keyof T]: K extends `pdf${string}`
     ? string
     : K extends `thumbnail${string}`
-    ? readonly [string, string]
-    :
-        | {
-            readonly text: string;
-            readonly type: "text";
-          }
-        | {
-            text: string;
-            type: "image";
-            thumbnail: string;
-          };
+      ? readonly [string, string]
+      :
+          | {
+              readonly text: string;
+              readonly type: "text";
+            }
+          | {
+              text: string;
+              type: "image";
+              thumbnail: string;
+            };
 };
 
 function createRow<T extends ValidateRow<T>>(row: T): T {
