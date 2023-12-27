@@ -30,7 +30,7 @@ running with a new project in no time. It provides:
 - Debugging set up with examples for vscode and vim.
 - Automated dependency updates via
   [renovate](https://github.com/renovatebot/renovate).
-- Using the current LTS, Node.js 18
+- Using the current LTS, Node.js 20
 
 #### Project Goals
 
