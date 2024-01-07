@@ -68,8 +68,9 @@ add . && git commit -am "initial commit"`
 - (optional) Set up the git hook for formatting your code. `cp
 .git-hooks/pre-commit .git/hooks/pre-commit`. For windows you need to use
   [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to use this.
-- Use the node version specified in .nvmrc `nvm install && nvm use`
-- Install dependencies `npm i -g yarn && yarn`
+- Use the node version specified in .nvmrc `nvm install && nvm use` (on windows you need to specify the node version in the command)
+- Enable corepack and update yarn `corepack enable`
+- Install dependencies `yarn`
 - You're done🎉 What about you try running the tests? Run `yarn test`. See the
   section below for all available commands together with their explanation.
 
