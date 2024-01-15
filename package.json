@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@tsconfig/node20": "20.1.2",
-    "@types/node": "20.10.7",
+    "@types/node": "20.10.8",
     "@types/nodemon": "1.19.6",
     "@types/shelljs": "0.8.15",
     "@typescript-eslint/eslint-plugin": "5.62.0",
