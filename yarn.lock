@@ -359,12 +359,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.10.8":
-  version: 20.10.8
-  resolution: "@types/node@npm:20.10.8"
+"@types/node@npm:20.11.2":
+  version: 20.11.2
+  resolution: "@types/node@npm:20.11.2"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 820efb084997bb62635883c820bc00c4bd01c71d66b8191fe8559256d6612f6665bbf682ed700bc55a99d48ff1e646d987c6f51afb3cffdb772f267727706277
+  checksum: 029d603b56f7277b109a14e29e97d8e7269960cedafd8761cd0e65a0bcd9e7a554c192708becf3248a22f42681f476320af6a06c64a692a52414d1c167d9f50a
   languageName: node
   linkType: hard
 
@@ -1907,7 +1907,7 @@ __metadata:
   resolution: "nodejs-typescript-modern-starter@workspace:."
   dependencies:
     "@tsconfig/node20": "npm:20.1.2"
-    "@types/node": "npm:20.10.8"
+    "@types/node": "npm:20.11.2"
     "@types/nodemon": "npm:1.19.6"
     "@types/shelljs": "npm:0.8.15"
     "@typescript-eslint/eslint-plugin": "npm:5.62.0"
@@ -1917,7 +1917,7 @@ __metadata:
     eslint: "npm:8.56.0"
     eslint-config-prettier: "npm:8.10.0"
     nodemon: "npm:2.0.22"
-    prettier: "npm:3.1.1"
+    prettier: "npm:3.2.2"
     shelljs: "npm:0.8.5"
     typescript: "npm:5.3.3"
   bin:
@@ -2093,12 +2093,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.1.1":
-  version: 3.1.1
-  resolution: "prettier@npm:3.1.1"
+"prettier@npm:3.2.2":
+  version: 3.2.2
+  resolution: "prettier@npm:3.2.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 26a249f321b97d26c04483f1bf2eeb22e082a76f4222a2c922bebdc60111691aad4ec3979610e83942e0b956058ec361d9e9c81c185172264eb6db9aa678082b
+  checksum: ab9470ff6cfd19f28bc424f22e58f2fc4a488d148b9384f6c3739235017c8350cae82b3697392c23d9b098b9d8dfaa1cc9ff4ef25fd45f54c97b95f9cc7a1f7d
   languageName: node
   linkType: hard
 
