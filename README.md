@@ -16,9 +16,10 @@ running with a new project in no time. It provides:
   compatible with the operating systems linux, macos and windows.
 - Github Actions in place runnung with current node version (18,20) on linux,
   macos and windows to automatically (for each PR):
-  - build and test the code
+  - test the code
+  - compile the codebase from ts to js
   - check for formatting issues
-  - lint the codebase
+  - check for linting issues
 - Testing via the new Node.js [test
   runner](https://nodejs.org/api/test.html#test-runner) instead of something
   like mocha or jest.
@@ -77,19 +78,19 @@ add . && git commit -am "initial commit"`
 ## Scripts and their explanation
 
 All scripts can be found inside the package.json file under the "scripts"
-attribute. They simply invoke the `tasks.mjs` file which handles the logic
-behind these scripts. The `tasks.mjs` file was created in order to be able to
-easily implement operating system dependant code and leverage comments. You can
-just take a look inside the tasks.mjs file in order to understand what is going
-on behind the scenes. It contains comments for every script.
+attribute.
 
-- `yarn build` -> Builds the project. It transpiles the typescript code to
-  javascript and stores the output inside the dist folder. Deletes any files
-  from previous builds beforehand to become repeatable/idempotent.
 - `yarn bundle` -> Bundles the whole code into a single javascript file which
-  will be stored inside the bundle folder.
-- `yarn clean` -> Removes built files. Deletes the dist and bundle directory and
-  the files inside of them. Normally there is no need to invoke this manually.
+  will be stored inside the dist folder. For prod deployments you typically just
+  copy this file somewhere and then run something like `node --enable-source-maps
+./index.js`.
+- `yarn clean` -> Removes bundled files by deleting the dist folder. Normally
+  there is no need to invoke this manually.
+- `yarn compile` -> Runs the typescript compiler against the typescript
+  codebase. Displays any errors if they occur.
+- `yarn compile-watch` -> Runs the typescript compiler every time you make
+  changes to a file. It is good to open this in another terminal while
+  developing to spot typescript issues.
 - `yarn dev` -> This should be used for running the code while developing. It
   watches all changes you make to your typescript codebase and automatically
   rebuilds the project. It does also watch all changes made to the built project
@@ -102,7 +103,7 @@ on behind the scenes. It contains comments for every script.
   auto-fixable and reports the rest of them to you.
 - `yarn lint-check` -> Checks for linting errors using eslint. This is typically
   only invoked by the CI/CD pipeline.
-- `yarn start` -> Runs the code. This only works if the code was built before ;).
+- `yarn start` -> Runs the code. This only works if the code was bundled before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
   approaches of putting tests beside the source code as well as putting tests in
   a seperate folder.

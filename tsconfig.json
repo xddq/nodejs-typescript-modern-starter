@@ -12,8 +12,9 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "sourceMap": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true,
   },
   "include": ["src", "test"],
-  "exclude": ["dist", "bundle", "node_modules"]
+  "exclude": ["dist", "bundle", "node_modules"],
 }
