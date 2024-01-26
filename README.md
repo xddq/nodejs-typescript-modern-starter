@@ -11,7 +11,7 @@ This starter uses a bare-bones and minimal approach to get anyone up and
 running with a new project in no time. It provides:
 
 - Typescript 5 with a strict tsconfig.
-- Yarn/Npm scripts ready to do everything you commonly need. Supporting `build`,
+- Yarn/Npm scripts ready to do everything you commonly need. Supporting `compile`,
   `clean`, `test`, `bundle`, `dev` and `start`. These scripts are created to be
   compatible with the operating systems linux, macos and windows.
 - Github Actions in place runnung with current node version (18,20) on linux,
@@ -122,7 +122,7 @@ DAP compliant debugger
 
 #### Vim
 
-- Start the node process with inspect-brk `yarn build && node --inspect-brk ./dist/src/index.js` in one terminal.
+- Start the node process with inspect-brk `yarn compile && node --inspect-brk ./dist/src/index.js` in one terminal.
 - Open src/index.ts `vim ./src/index.ts` in another terminal.
 - Set breakpoint in line 6 (F9 is the default mapping)
 - Start vimspector by pressing F5
@@ -137,7 +137,7 @@ DAP compliant debugger
 
 #### Vim
 
-- Start the node process with inspect-brk `yarn build && node --inspect-brk --test --test-reporter spec` in one terminal.
+- Start the node process with inspect-brk `yarn compile && node --inspect-brk --test --test-reporter spec` in one terminal.
 - Open src/index.ts `vim ./src/hello.test.ts` in another terminal.
 - Set breakpoint in line 8 (F9 is the default mapping)
 - Start vimspector by pressing F5

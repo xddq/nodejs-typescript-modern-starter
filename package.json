@@ -28,7 +28,7 @@
   "author": "Pierre Dahmani <hi@pierre-dev.com>",
   "license": "MIT",
   "scripts": {
-    "bundle": "esbuild src/index.ts --outdir=dist --sourcemap --bundle --platform=node --target=node20.10.0",
+    "bundle": "esbuild src/index.ts --outdir=bundle --sourcemap --bundle --platform=node --target=node20.10.0",
     "clean": "rimraf dist",
     "compile": "tsc",
     "compile-watch": "tsc -w",
@@ -37,7 +37,7 @@
     "format-check": "prettier . --check",
     "lint": "eslint . --fix",
     "lint-check": "eslint .",
-    "start": "node --enable-source-maps ./dist/index.js",
+    "start": "node --enable-source-maps ./bundle/index.js",
     "test": "glob \"src/**/*.test.ts\" \"test/**\" -c \"tsx --test\""
   },
   "devDependencies": {

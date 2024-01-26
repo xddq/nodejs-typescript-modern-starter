@@ -13,7 +13,6 @@
     "declaration": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "noEmit": true,
   },
   "include": ["src", "test"],
   "exclude": ["dist", "bundle", "node_modules"],
