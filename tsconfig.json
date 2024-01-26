@@ -1,7 +1,19 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "baseUrl": "."
-  }
+    "outDir": "dist",
+    "baseUrl": ".",
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+  },
+  "include": ["src", "test"],
+  "exclude": ["dist", "bundle", "node_modules"],
 }

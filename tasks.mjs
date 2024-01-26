@@ -17,7 +17,7 @@ export const build = (additionalArguments = []) => {
   clean();
   const pathToTsc = ["node_modules", "typescript", "bin", "tsc"].join(path.sep);
   const { code } = shell.exec(
-    `node ${pathToTsc} ${additionalArguments.join(" ")}`
+    `node ${pathToTsc} ${additionalArguments.join(" ")}`,
   );
   handleNonZeroReturnCode(code);
 };
@@ -41,10 +41,10 @@ export const bundle = () => {
   // before bundling.
   build(["--noEmit"]);
   const pathToEsbuild = ["node_modules", "esbuild", "bin", "esbuild"].join(
-    path.sep
+    path.sep,
   );
   const { code } = shell.exec(
-    `node ${pathToEsbuild} src/index.ts --outdir=bundle --bundle --platform=node --target=node18.16.0`
+    `node ${pathToEsbuild} src/index.ts --outdir=bundle --bundle --platform=node --target=node18.16.0`,
   );
   handleNonZeroReturnCode(code);
 };
@@ -103,6 +103,48 @@ export const clean = () => {
 };
 
 /**
+ * Formats the whole codebase (ignores files specified in .prettierignore).
+ * @param {Array<string>} [additionalArguments]
+ */
+export const format = (additionalArguments) => {
+  const pathToPrettier = [
+    "node_modules",
+    "prettier",
+    "bin",
+    "prettier.cjs",
+  ].join(path.sep);
+  const { code } = shell.exec(
+    `node ${pathToPrettier} . ${additionalArguments}`,
+  );
+  if (code !== 0) {
+    console.error(`task failed with code ${code}`);
+    console.error(
+      "Run `yarn format` to format your codebase. Or set up the pre-commit hook to avoid these kind of issues.",
+    );
+    process.exit(code);
+  }
+};
+
+/**
+ * Lints the whole codebase (ignores files specified in .eslintignore).
+ * @param {Array<string>} [additionalArguments]
+ */
+export const lint = (additionalArguments) => {
+  const pathToEslint = ["node_modules", "eslint", "bin", "eslint.js"].join(
+    path.sep,
+  );
+  const { code } = shell.exec(`node ${pathToEslint} . ${additionalArguments}`);
+  if (code !== 0) {
+    console.error(`task failed with code ${code}`);
+    console.error(
+      "Run `yarn lint` to lint your codebase. It fixes automatically fixable problems for you." +
+        "The rest of the problems have to be figured out and cleared by yourself.",
+    );
+    process.exit(code);
+  }
+};
+
+/**
  * @param {number} code
  **/
 const handleNonZeroReturnCode = (code) => {
@@ -113,27 +155,33 @@ const handleNonZeroReturnCode = (code) => {
 };
 
 const main = () => {
-  const [_, __, taskName] = process.argv;
+  const [_, __, taskName, ...additionalArguments] = process.argv;
   if (taskName === "build") {
     return build();
-  }
-  if (taskName === "test") {
-    return test();
   }
   if (taskName === "bundle") {
     return bundle();
   }
-  if (taskName === "start") {
-    return start();
-  }
   if (taskName === "clean") {
     return clean();
   }
-  if (taskName === "watch-ts") {
-    return watchTs();
+  if (taskName === "format") {
+    return format(additionalArguments);
+  }
+  if (taskName === "lint") {
+    return lint(additionalArguments);
+  }
+  if (taskName === "start") {
+    return start();
+  }
+  if (taskName === "test") {
+    return test();
   }
   if (taskName === "watch-node") {
     return watchNode();
+  }
+  if (taskName === "watch-ts") {
+    return watchTs();
   }
 
   console.error(`Unknown task: ${taskName}`);
