@@ -82,7 +82,7 @@ attribute.
 
 - `yarn bundle` -> Bundles the whole code into a single javascript file which
   will be stored inside the dist folder. For prod deployments you typically just
-copy this file somewhere and then run something like `node --enable-source-maps
+  copy this file somewhere and then run something like `node --enable-source-maps
 ./index.js`.
 - `yarn clean` -> Removes bundled files by deleting the dist folder. Normally
   there is no need to invoke this manually.
@@ -90,7 +90,7 @@ copy this file somewhere and then run something like `node --enable-source-maps
   codebase. Displays any errors if they occur.
 - `yarn compile-watch` -> Runs the typescript compiler every time you make
   changes to a file. It is good to open this in another terminal while
-developing to spot typescript issues.
+  developing to spot typescript issues.
 - `yarn dev` -> This should be used for running the code while developing. It
   watches all changes you make to your typescript codebase and automatically
   rebuilds the project. It does also watch all changes made to the built project
@@ -106,7 +106,7 @@ developing to spot typescript issues.
 - `yarn start` -> Runs the code. This only works if the code was bundled before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
   approaches of putting tests beside the source code as well as putting tests in
-a seperate folder.
+  a seperate folder.
 
 ## Debugging
 
