@@ -14,7 +14,7 @@ running with a new project in no time. It provides:
 - Yarn/Npm scripts ready to do everything you commonly need. Supporting `compile`,
   `clean`, `test`, `bundle`, `dev` and `start`. These scripts are created to be
   compatible with the operating systems linux, macos and windows.
-- Github Actions in place runnung with current node version (18,20) on linux,
+- Github Actions in place runnung with current node LTS version (20) on linux,
   macos and windows to automatically (for each PR):
   - test the code
   - compile the codebase from ts to js
@@ -31,7 +31,7 @@ running with a new project in no time. It provides:
 - Debugging set up with examples for vscode and vim.
 - Automated dependency updates via
   [renovate](https://github.com/renovatebot/renovate).
-- Using the current LTS, Node.js 20
+- Using the current LTS, nodejs 20
 
 #### Project Goals
 
@@ -44,14 +44,14 @@ running with a new project in no time. It provides:
   side by side_ as well as _all tests in a seperate folder_ already working and
   set up for you.
 - Advocate for **using CI/CD** (in this case Github Actions). Automatically
-  check formatting, linting and build and test the code base. Everything running
+  check formatting, check linting, compile and test the code base. Everything running
   on each PR.
 - Advocate establishing best practices via linting rules using eslint and
   typescript-eslint. However, still giving a documented way to quickly and
   easily disable them, if that is preferred.
 - Use modern tools like esbuild, typescript 5 and the nodejs test runner.
 - Be open for any framework or library that you prefer. This setup should be
-  useful to everyone. You can easily add your preferred packages in to time.
+  useful to everyone. You can easily add your preferred packages in no time.
 
 ## Prerequisites
 
