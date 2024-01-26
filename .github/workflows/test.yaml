@@ -1,9 +1,9 @@
-name: build and test codebase
+name: test codebase
 
 on: [pull_request]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ${{ matrix.os }}
 
     strategy:

@@ -38,7 +38,7 @@
     "lint": "eslint . --fix",
     "lint-check": "eslint .",
     "start": "node --enable-source-maps ./dist/index.js",
-    "test": "glob src/**/*.test.ts test/** -c 'tsx --test'"
+    "test": "glob 'src/**/*.test.ts' 'test/**' -c 'tsx --test'"
   },
   "devDependencies": {
     "@tsconfig/node20": "20.1.2",
