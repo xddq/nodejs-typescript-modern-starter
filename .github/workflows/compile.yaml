@@ -1,0 +1,23 @@
+name: compile typescript
+
+on: [pull_request]
+
+jobs:
+  compile:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Dependencies
+        run: yarn --immutable
+      - name: Compile
+        run: yarn compile
