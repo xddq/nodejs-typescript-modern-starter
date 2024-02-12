@@ -333,12 +333,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.16":
-  version: 20.11.16
-  resolution: "@types/node@npm:20.11.16"
+"@types/node@npm:20.11.17":
+  version: 20.11.17
+  resolution: "@types/node@npm:20.11.17"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 751f50ec5c9332b11515e82fe37c71479ac4449b711280aa3c7910edf67b1e3f5ac00041512add543f9a892096a68356406998bf02a2c809a73d176c44c28414
+  checksum: 3342df87258d1c56154bcd4b85180f48675427b235971e6e6e2e037353f5a2ae9aaa05ba5df0fe1e2d2f1022c8d856fd39056b9d7f50ea30c0ca3214137cae1d
   languageName: node
   linkType: hard
 
@@ -1749,7 +1749,7 @@ __metadata:
   resolution: "nodejs-typescript-modern-starter@workspace:."
   dependencies:
     "@tsconfig/node20": "npm:20.1.2"
-    "@types/node": "npm:20.11.16"
+    "@types/node": "npm:20.11.17"
     "@types/nodemon": "npm:1.19.6"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
@@ -1760,7 +1760,7 @@ __metadata:
     nodemon: "npm:3.0.3"
     prettier: "npm:3.2.5"
     rimraf: "npm:5.0.5"
-    tsx: "npm:4.7.0"
+    tsx: "npm:4.7.1"
     typescript: "npm:5.3.3"
   bin:
     nodejs-typescript-modern-starter: dist/src/index.js
@@ -2252,9 +2252,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:4.7.0":
-  version: 4.7.0
-  resolution: "tsx@npm:4.7.0"
+"tsx@npm:4.7.1":
+  version: 4.7.1
+  resolution: "tsx@npm:4.7.1"
   dependencies:
     esbuild: "npm:~0.19.10"
     fsevents: "npm:~2.3.3"
@@ -2264,7 +2264,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 3e6ee0a0a8adb7b1cb58875f50b143b41df0132ade3a7cdda16a166ac473eee446197762ba6afb235ace4c6adae7e55f61a420ee55b17438717eea1e55e611c0
+  checksum: 3a462b595f31ae58b31f9c6e8c450577dc87660b1225012bd972b6b58d7d2f6c4034728763ebc53bb731acff68de8b0fa50586e4c1ec4c086226f1788ccf9b7d
   languageName: node
   linkType: hard
 
