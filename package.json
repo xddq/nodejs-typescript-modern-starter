@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@tsconfig/node20": "20.1.4",
-    "@types/node": "20.12.3",
+    "@types/node": "20.12.5",
     "@types/nodemon": "1.19.6",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -53,8 +53,8 @@
     "nodemon": "3.1.0",
     "prettier": "3.2.5",
     "rimraf": "5.0.5",
-    "tsx": "4.7.1",
-    "typescript": "5.4.3"
+    "tsx": "4.7.2",
+    "typescript": "5.4.4"
   },
   "packageManager": "yarn@4.0.2"
 }
