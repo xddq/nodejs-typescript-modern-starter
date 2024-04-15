@@ -333,12 +333,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.12.5":
-  version: 20.12.5
-  resolution: "@types/node@npm:20.12.5"
+"@types/node@npm:20.12.7":
+  version: 20.12.7
+  resolution: "@types/node@npm:20.12.7"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 7b647ea6679016e4e58e1aa439c46b610230ffcbe19173911fbf1d1fa329ec6fd1eeba4e3e2d8743206d3b00d5a0cad75f1c90189e1d1ec057eb48df1a1dd747
+  checksum: b4a28a3b593a9bdca5650880b6a9acef46911d58cf7cfa57268f048e9a7157a7c3196421b96cea576850ddb732e3b54bc982c8eb5e1e5ef0635d4424c2fce801
   languageName: node
   linkType: hard
 
@@ -1771,7 +1771,7 @@ __metadata:
   resolution: "nodejs-typescript-modern-starter@workspace:."
   dependencies:
     "@tsconfig/node20": "npm:20.1.4"
-    "@types/node": "npm:20.12.5"
+    "@types/node": "npm:20.12.7"
     "@types/nodemon": "npm:1.19.6"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
