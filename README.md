@@ -20,14 +20,12 @@ running with a new project in no time. It provides:
   - compile the codebase from ts to js
   - check for formatting issues
   - check for linting issues
-- Testing via the new Node.js [test
-  runner](https://nodejs.org/api/test.html#test-runner) instead of something
-  like mocha or jest.
+- Testing via [jest](https://www.npmjs.com/package/jest)
 - Formatting via [prettier](https://prettier.io/).
 - Linting via [eslint](https://eslint.org/) and
   [typescript-eslint](https://typescript-eslint.io/)
 - Bundling via [esbuild](https://esbuild.github.io/), a fast bundler that "just
-  works" and is nowadays even used in the typescript codebase.
+  works".
 - Debugging set up with examples for vscode and vim.
 - Automated dependency updates via
   [renovate](https://github.com/renovatebot/renovate).
@@ -105,8 +103,10 @@ attribute.
   only invoked by the CI/CD pipeline.
 - `yarn start` -> Runs the code. This only works if the code was bundled before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
-  approaches of putting tests beside the source code as well as putting tests in
-  a seperate folder.
+  common approaches of putting tests beside the source code as well as putting
+  tests in a separate folder.
+  - You can inspect the code coverage in depth by running `npx http-server
+./coverage/lcov-report` and then browsing http://localhost:8080.
 
 ## Debugging
 
