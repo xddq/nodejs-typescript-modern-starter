@@ -1,6 +1,7 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
+    "noEmit": true,
     "outDir": "dist",
     "baseUrl": ".",
     "allowUnusedLabels": false,
@@ -15,5 +16,5 @@
     "resolveJsonModule": true
   },
   "include": ["src", "test"],
-  "exclude": ["dist", "bundle", "node_modules"]
+  "exclude": ["dist", "node_modules"]
 }

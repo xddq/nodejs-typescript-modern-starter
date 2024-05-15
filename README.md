@@ -86,7 +86,7 @@ attribute.
   there is no need to invoke this manually.
 - `yarn compile` -> Runs the typescript compiler against the typescript
   codebase. Displays any errors if they occur.
-- `yarn compile-watch` -> Runs the typescript compiler every time you make
+- `yarn compile:watch` -> Runs the typescript compiler every time you make
   changes to a file. It is good to open this in another terminal while
   developing to spot typescript issues.
 - `yarn dev` -> This should be used for running the code while developing. It
@@ -95,11 +95,11 @@ attribute.
   and restarts the code whenever changes are detected. This enables a quick
   feedback loop.
 - `yarn format` -> Formats the code using prettier.
-- `yarn format-check` -> Checks for formatting errors using prettier. This is
+- `yarn format:check` -> Checks for formatting errors using prettier. This is
   typically only invoked by the CI/CD pipeline.
 - `yarn lint` -> Lints the code using eslint. Fixes problems that are
   auto-fixable and reports the rest of them to you.
-- `yarn lint-check` -> Checks for linting errors using eslint. This is typically
+- `yarn lint:check` -> Checks for linting errors using eslint. This is typically
   only invoked by the CI/CD pipeline.
 - `yarn start` -> Runs the code. This only works if the code was bundled before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
