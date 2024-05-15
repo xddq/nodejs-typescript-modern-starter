@@ -15,4 +15,4 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
       - name: Lint
-        run: yarn lint-check
+        run: yarn lint:check
