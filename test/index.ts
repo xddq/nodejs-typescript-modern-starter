@@ -1,8 +1,7 @@
-import { describe, it } from "node:test";
-import assert from "node:assert/strict";
+import { describe, it } from "@jest/globals";
 
-describe("tests in seperate folder", () => {
+describe("when having tests in seperate folder", () => {
   it("works", () => {
-    assert.equal(true, true);
+    expect(true).toBe(true);
   });
 });
