@@ -122,7 +122,8 @@ DAP compliant debugger
 
 #### Vim
 
-- Start the node process with inspect-brk `yarn compile && node --inspect-brk ./dist/src/index.js` in one terminal.
+- Start the node process with inspect-brk `yarn bundle && node
+--enable-source-maps --inspect-brk ./dist/src/index.js` in one terminal.
 - Open src/index.ts `vim ./src/index.ts` in another terminal.
 - Set breakpoint in line 6 (F9 is the default mapping)
 - Start vimspector by pressing F5
@@ -137,7 +138,9 @@ DAP compliant debugger
 
 #### Vim
 
-- Start the node process with inspect-brk `yarn compile && node --inspect-brk --test --test-reporter spec` in one terminal.
+- Start the node process with inspect-brk `node --enable-source-maps
+--inspect-brk --no-lazy ./node_modules/.bin/jest --runInBand .` in one
+  terminal.
 - Open src/index.ts `vim ./src/hello.test.ts` in another terminal.
 - Set breakpoint in line 8 (F9 is the default mapping)
 - Start vimspector by pressing F5
