@@ -99,6 +99,7 @@ attribute.
   - If you want to restart the debugging process every time you change the code,
     you can use something like `nodemon --watch src --watch test --ext ts,json
 --exec 'yarn debug'` or when debugging tests with `nodemon --watch src --watch
+test --ext ts,json --exec 'yarn debug:test'`
 - `yarn debug:test` -> Starts the test run in debugging mode. Waits for a
   debugger to attach. See Debugging below for more info.
 - `yarn format` -> Formats the code using prettier.
