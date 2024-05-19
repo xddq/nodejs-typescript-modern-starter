@@ -94,6 +94,13 @@ attribute.
   rebuilds the project. It does also watch all changes made to the built project
   and restarts the code whenever changes are detected. This enables a quick
   feedback loop.
+- `yarn debug` -> Starts the app in debugging mode. Waits for a debugger to
+  attach. See Debugging below for more info.
+  - If you want to restart the debugging process every time you change the code,
+    you can use something like `nodemon --watch src --watch test --ext ts,json
+--exec 'yarn debug'` or when debugging tests with `nodemon --watch src --watch
+- `yarn debug:test` -> Starts the test run in debugging mode. Waits for a
+  debugger to attach. See Debugging below for more info.
 - `yarn format` -> Formats the code using prettier.
 - `yarn format:check` -> Checks for formatting errors using prettier. This is
   typically only invoked by the CI/CD pipeline.
@@ -120,38 +127,34 @@ DAP compliant debugger
 
 ### Debugging Code
 
-#### Vim
+There are somewhat "different" ways of starting the debugger. Once is by
+starting the app and waiting for a debugger to connect and the other one is
+starting the app initiated by the debugger. I made the experience that the
+former works on any given code base, no matter the amount of transipilation or
+bundling steps and custom steups while the latter does fail in extremely
+customized scenarios. Therefore here only the first one is covered with
+examples.
 
-- Start the node process with inspect-brk `yarn bundle && node
---enable-source-maps --inspect-brk ./dist/src/index.js` in one terminal.
-- Open src/index.ts `vim ./src/index.ts` in another terminal.
-- Set breakpoint in line 6 (F9 is the default mapping)
-- Start vimspector by pressing F5
+#### Vim or Vscode
+
+- Run `yarn debug` in another terminal
+- Open src/index.ts `vim ./src/index.ts` (or code ./src/index.ts) in another terminal.
+- Set breakpoint somewhere in the file at the console log (F9 is the default mapping).
+- Start by pressing F5
 - Press F5 again, should see the console.log output
 - Done🎉
 
-#### Vscode
-
-- Open code, set a breakpoint in src/index.ts and just start debugging with F5.
-
 ### Debugging Tests
 
-#### Vim
+#### Vim or Vscode
 
-- Start the node process with inspect-brk `node --enable-source-maps
---inspect-brk --no-lazy ./node_modules/.bin/jest --runInBand .` in one
-  terminal.
+- Run `yarn debug:test` in another terminal
 - Open src/index.ts `vim ./src/hello.test.ts` in another terminal.
-- Set breakpoint in line 8 (F9 is the default mapping)
-- Start vimspector by pressing F5
-- You should see the first console log already "testing returnHelloWorld()"
-- Press F5 again, should see the second console.log "Done"
+- Set breakpoint in the line of the console log in the test file.
+- Start by pressing F5 (then skip the jest internal file once with F5)
+- Check the terminal where you ran `yarn debug:test`, it should not display the console log yet.
+- Press F5 again, should see the console.log output there now.
 - Done🎉
-
-#### Vscode
-
-- Open code and set a breakpoint in /src/hello.test.ts.
-- Go to the package.json in the 'scripts' sections, click on 'debug' and select 'test'.
 
 ## Linting
 

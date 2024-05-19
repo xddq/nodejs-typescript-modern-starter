@@ -32,6 +32,8 @@
     "compile": "tsc",
     "compile:watch": "tsc -w",
     "dev": "nodemon --watch src --watch test --ext ts,json --exec 'yarn bundle && yarn start'",
+    "debug": "yarn bundle && node --enable-source-maps --inspect-brk ./dist/index.js",
+    "debug:test": "node --inspect-brk ./node_modules/.bin/jest --runInBand .",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint": "eslint . --fix",
