@@ -4,10 +4,9 @@
       "adapter": "js-debug",
       "configuration": {
         "request": "attach",
-        "outDir": "${workspaceRoot}/dist/**.js",
-        "program": "${workspaceRoot}/src/index.ts",
-        "cwd": "${workspaceRoot}",
-        "stopOnEntry": false
+        "outDir": "${workspaceRoot}/dist",
+        "skipFiles": ["<node_internals>/**"],
+        "cwd": "${workspaceRoot}"
       },
       "breakpoints": {
         "exception": {
