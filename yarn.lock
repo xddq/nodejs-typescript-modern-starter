@@ -2407,12 +2407,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.12.13":
-  version: 20.12.13
-  resolution: "@types/node@npm:20.12.13"
+"@types/node@npm:20.14.0":
+  version: 20.14.0
+  resolution: "@types/node@npm:20.14.0"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/c9f02cfe342bce4aa9221f389115c1f9e3bd9abc87d45e3b2c3a5b92d99523c02b72dd67f50cbbc5edddbaf7dd458cf61dd3289d7a8c14fde80c998df10fee82
+  checksum: 10/49b332fbf8aee4dc4f61cc1f1f6e130632510f795dd7b274e55894516feaf4bec8a3d13ea764e2443e340a64ce9bbeb006d14513bf6ccdd4f21161eccc7f311e
   languageName: node
   linkType: hard
 
@@ -5035,15 +5035,15 @@ __metadata:
     "@jest/globals": "npm:29.7.0"
     "@tsconfig/node20": "npm:20.1.4"
     "@types/jest": "npm:29.5.12"
-    "@types/node": "npm:20.12.13"
+    "@types/node": "npm:20.14.0"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
     esbuild: "npm:0.21.3"
     eslint: "npm:8.57.0"
     eslint-config-prettier: "npm:9.1.0"
     jest: "npm:29.7.0"
-    nodemon: "npm:3.1.2"
-    prettier: "npm:3.2.5"
+    nodemon: "npm:3.1.3"
+    prettier: "npm:3.3.0"
     rimraf: "npm:5.0.7"
     typescript: "npm:5.4.5"
   bin:
@@ -5052,9 +5052,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"nodemon@npm:3.1.2":
-  version: 3.1.2
-  resolution: "nodemon@npm:3.1.2"
+"nodemon@npm:3.1.3":
+  version: 3.1.3
+  resolution: "nodemon@npm:3.1.3"
   dependencies:
     chokidar: "npm:^3.5.2"
     debug: "npm:^4"
@@ -5068,7 +5068,7 @@ __metadata:
     undefsafe: "npm:^2.0.5"
   bin:
     nodemon: bin/nodemon.js
-  checksum: 10/e5a87e42c874f9504fa5740c65692978c1f8444e9250598f167a3d55a90d3189a91790d35b4a2a0991b05d574f2679978449c6190b698a5c6e3f0343b5dfcac0
+  checksum: 10/ad55e76bb755c07b07c05b1b4ea7aca7bdf71bf8c7bfbf2db95e8ddcc964dde5eab9599c9de0db6899db9f2b98e573220f2d3c0796b41865ae754409e557cf50
   languageName: node
   linkType: hard
 
@@ -5297,12 +5297,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.2.5":
-  version: 3.2.5
-  resolution: "prettier@npm:3.2.5"
+"prettier@npm:3.3.0":
+  version: 3.3.0
+  resolution: "prettier@npm:3.3.0"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10/d509f9da0b70e8cacc561a1911c0d99ec75117faed27b95cc8534cb2349667dee6351b0ca83fa9d5703f14127faa52b798de40f5705f02d843da133fc3aa416a
+  checksum: 10/e55233f8e4b5f96f52180dbfa424ae797a98a9b8a9a7a79de5004e522c02b423e71927ed99d855dbfcd00dc3b82e5f6fb304cfe117cc4e7c8477d883df2d8984
   languageName: node
   linkType: hard
 
