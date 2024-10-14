@@ -42,8 +42,8 @@
     "test": "jest --runInBand ."
   },
   "devDependencies": {
-    "@babel/core": "7.25.7",
-    "@babel/preset-env": "7.25.7",
+    "@babel/core": "7.25.8",
+    "@babel/preset-env": "7.25.8",
     "@babel/preset-typescript": "7.25.7",
     "@jest/globals": "29.7.0",
     "@tsconfig/node20": "20.1.4",
