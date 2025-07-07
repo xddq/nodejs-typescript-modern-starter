@@ -42,13 +42,13 @@
     "test": "jest --runInBand ."
   },
   "devDependencies": {
-    "@babel/core": "7.27.7",
-    "@babel/preset-env": "7.27.2",
+    "@babel/core": "7.28.0",
+    "@babel/preset-env": "7.28.0",
     "@babel/preset-typescript": "7.27.1",
     "@jest/globals": "29.7.0",
     "@tsconfig/node20": "20.1.6",
     "@types/jest": "29.5.14",
-    "@types/node": "20.19.2",
+    "@types/node": "20.19.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "esbuild": "0.21.3",
