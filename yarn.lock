@@ -2541,12 +2541,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.19.11":
-  version: 20.19.11
-  resolution: "@types/node@npm:20.19.11"
+"@types/node@npm:20.19.12":
+  version: 20.19.12
+  resolution: "@types/node@npm:20.19.12"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/7179ed464a781cad20117362df58c12839b40922b53356e1a74f86c99d9d1ef9a27edce360901608f896c247c9c4131ba9c7222331e92cde17b723c75d5c8f2e
+  checksum: 10/8277f989d922e52abf8998b5c8a41b12dd510cbb48fbb6c331aeea1519e0127d707164e2dd30ff18d79ad49874d80b2e5d01f1ca535814eee959ead7be63a167
   languageName: node
   linkType: hard
 
@@ -5283,7 +5283,7 @@ __metadata:
     "@jest/globals": "npm:29.7.0"
     "@tsconfig/node20": "npm:20.1.6"
     "@types/jest": "npm:29.5.14"
-    "@types/node": "npm:20.19.11"
+    "@types/node": "npm:20.19.12"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
     esbuild: "npm:0.21.3"
