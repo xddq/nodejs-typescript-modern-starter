@@ -48,7 +48,7 @@
     "@jest/globals": "29.7.0",
     "@tsconfig/node20": "20.1.6",
     "@types/jest": "29.5.14",
-    "@types/node": "20.19.17",
+    "@types/node": "20.19.19",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "esbuild": "0.21.3",
@@ -58,7 +58,7 @@
     "nodemon": "3.1.10",
     "prettier": "3.6.2",
     "rimraf": "5.0.10",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "packageManager": "yarn@4.2.2"
 }
